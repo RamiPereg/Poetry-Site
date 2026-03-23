@@ -1,1 +1,17 @@
+backend:
+  name: github
+  repo: RamiPereg/Poetry-Site
+  branch: main
 
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "poems"
+    label: "Poems"
+    folder: "/"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
